@@ -67,18 +67,19 @@ class PlayerViewModel: ObservableObject {
     let player = AVPlayer()
 
     init() {
+        let defaultMovie = Movie(url: URL(string: "https://bitmovin-a.akamaihd.net/content/dataset/multi-codec/hevc/stream_fmp4.m3u8")!, title: "HLS HEVC")
         do {
             let data = UserDefaults.standard.data(forKey: "PlayList")
             if let data = data {
                 let decoder = JSONDecoder()
                 playList = try decoder.decode([Movie].self, from: data)
             } else {
-                playList = []
+                playList = [defaultMovie]
             }
 
         } catch {
             print("Unable to Decode PlayList (\(error))")
-            playList = []
+            playList = [defaultMovie]
         }
 
         Task {
