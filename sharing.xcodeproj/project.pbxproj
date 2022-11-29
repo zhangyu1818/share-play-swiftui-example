@@ -7,19 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A42C8112934B82200224990 /* sharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8102934B82200224990 /* sharingApp.swift */; };
-		2A42C8132934B82200224990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8122934B82200224990 /* ContentView.swift */; };
+		2A2D00FC2934CF5A00C25964 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D00FB2934CF5A00C25964 /* PlayerView.swift */; };
+		2A2D00FF2935CCC700C25964 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D00FE2935CCC700C25964 /* PlayerViewModel.swift */; };
+		2A42C8112934B82200224990 /* SharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8102934B82200224990 /* SharingApp.swift */; };
 		2A42C8152934B82200224990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A42C8142934B82200224990 /* Assets.xcassets */; };
 		2A42C8192934B82200224990 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A42C8182934B82200224990 /* Preview Assets.xcassets */; };
+		2A42C8212934B93100224990 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8202934B93100224990 /* HomeView.swift */; };
+		2A42C8242934BEDA00224990 /* PreparePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8232934BEDA00224990 /* PreparePlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A2D00FB2934CF5A00C25964 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		2A2D00FE2935CCC700C25964 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		2A2D01002936179800C25964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = sharing/Info.plist; sourceTree = "<group>"; };
 		2A42C80D2934B82200224990 /* sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A42C8102934B82200224990 /* sharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharingApp.swift; sourceTree = "<group>"; };
-		2A42C8122934B82200224990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A42C8102934B82200224990 /* SharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingApp.swift; sourceTree = "<group>"; };
 		2A42C8142934B82200224990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A42C8162934B82200224990 /* sharing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sharing.entitlements; sourceTree = "<group>"; };
 		2A42C8182934B82200224990 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A42C8202934B93100224990 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2A42C8232934BEDA00224990 /* PreparePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparePlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,10 +40,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A2D00FD2935CCB400C25964 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2A2D00FE2935CCC700C25964 /* PlayerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		2A42C8042934B82200224990 = {
 			isa = PBXGroup;
 			children = (
-				2A42C80F2934B82200224990 /* sharing */,
+				2A2D01002936179800C25964 /* Info.plist */,
+				2A42C80F2934B82200224990 /* Sharing */,
 				2A42C80E2934B82200224990 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,16 +65,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A42C80F2934B82200224990 /* sharing */ = {
+		2A42C80F2934B82200224990 /* Sharing */ = {
 			isa = PBXGroup;
 			children = (
-				2A42C8102934B82200224990 /* sharingApp.swift */,
-				2A42C8122934B82200224990 /* ContentView.swift */,
+				2A2D00FD2935CCB400C25964 /* ViewModels */,
+				2A42C81F2934B92200224990 /* Views */,
+				2A42C8102934B82200224990 /* SharingApp.swift */,
 				2A42C8142934B82200224990 /* Assets.xcassets */,
 				2A42C8162934B82200224990 /* sharing.entitlements */,
 				2A42C8172934B82200224990 /* Preview Content */,
 			);
-			path = sharing;
+			path = Sharing;
 			sourceTree = "<group>";
 		};
 		2A42C8172934B82200224990 /* Preview Content */ = {
@@ -67,6 +84,16 @@
 				2A42C8182934B82200224990 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2A42C81F2934B92200224990 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A42C8232934BEDA00224990 /* PreparePlayView.swift */,
+				2A42C8202934B93100224990 /* HomeView.swift */,
+				2A2D00FB2934CF5A00C25964 /* PlayerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A42C8132934B82200224990 /* ContentView.swift in Sources */,
-				2A42C8112934B82200224990 /* sharingApp.swift in Sources */,
+				2A42C8212934B93100224990 /* HomeView.swift in Sources */,
+				2A2D00FF2935CCC700C25964 /* PlayerViewModel.swift in Sources */,
+				2A42C8242934BEDA00224990 /* PreparePlayView.swift in Sources */,
+				2A42C8112934B82200224990 /* SharingApp.swift in Sources */,
+				2A2D00FC2934CF5A00C25964 /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +299,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sharing/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -288,6 +319,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +340,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sharing/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -326,6 +360,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
