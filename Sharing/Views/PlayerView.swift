@@ -8,6 +8,22 @@
 import AVKit
 import SwiftUI
 
+struct UIKitAVPlayer: UIViewControllerRepresentable {
+    let player: AVPlayer
+
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let vc = AVPlayerViewController()
+        vc.player = player
+        vc.canStartPictureInPictureAutomaticallyFromInline = true
+        vc.allowsPictureInPicturePlayback = true
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
+        uiViewController.player = player
+    }
+}
+
 struct PlayerView: View {
     @StateObject var playerViewModel = PlayerViewModel.shared
 
@@ -17,7 +33,7 @@ struct PlayerView: View {
                 .foregroundColor(.secondary)
         }
         else {
-            VideoPlayer(player: playerViewModel.player)
+            UIKitAVPlayer(player: playerViewModel.player)
                 .ignoresSafeArea()
         }
     }

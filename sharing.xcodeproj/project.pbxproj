@@ -10,10 +10,10 @@
 		2A2D00FC2934CF5A00C25964 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D00FB2934CF5A00C25964 /* PlayerView.swift */; };
 		2A2D00FF2935CCC700C25964 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D00FE2935CCC700C25964 /* PlayerViewModel.swift */; };
 		2A42C8112934B82200224990 /* SharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8102934B82200224990 /* SharingApp.swift */; };
-		2A42C8152934B82200224990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A42C8142934B82200224990 /* Assets.xcassets */; };
 		2A42C8192934B82200224990 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A42C8182934B82200224990 /* Preview Assets.xcassets */; };
 		2A42C8212934B93100224990 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8202934B93100224990 /* HomeView.swift */; };
 		2A42C8242934BEDA00224990 /* PreparePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42C8232934BEDA00224990 /* PreparePlayView.swift */; };
+		2AD9E8C3293B539B001C3E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9E8C2293B539B001C3E22 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +22,11 @@
 		2A2D01002936179800C25964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = sharing/Info.plist; sourceTree = "<group>"; };
 		2A42C80D2934B82200224990 /* sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A42C8102934B82200224990 /* SharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingApp.swift; sourceTree = "<group>"; };
-		2A42C8142934B82200224990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A42C8162934B82200224990 /* sharing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sharing.entitlements; sourceTree = "<group>"; };
 		2A42C8182934B82200224990 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A42C8202934B93100224990 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2A42C8232934BEDA00224990 /* PreparePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparePlayView.swift; sourceTree = "<group>"; };
+		2AD9E8C2293B539B001C3E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				2A2D00FD2935CCB400C25964 /* ViewModels */,
 				2A42C81F2934B92200224990 /* Views */,
 				2A42C8102934B82200224990 /* SharingApp.swift */,
-				2A42C8142934B82200224990 /* Assets.xcassets */,
+				2AD9E8C2293B539B001C3E22 /* Assets.xcassets */,
 				2A42C8162934B82200224990 /* sharing.entitlements */,
 				2A42C8172934B82200224990 /* Preview Content */,
 			);
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A42C8192934B82200224990 /* Preview Assets.xcassets in Resources */,
-				2A42C8152934B82200224990 /* Assets.xcassets in Resources */,
+				2AD9E8C3293B539B001C3E22 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +300,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharing/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sharing Player";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -341,6 +342,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharing/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sharing Player";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
