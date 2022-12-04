@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/**
+ TODO:
+ 1. UIActivityViewController SharePlay
+ 2. 
+ */
+
 struct HomeView: View {
     @State var columnVisibility = NavigationSplitViewVisibility.automatic
 

@@ -7,9 +7,31 @@
 
 import SwiftUI
 
+struct ShareSheetView: UIViewControllerRepresentable {
+    typealias Callback = (_ activityType: UIActivity.ActivityType?, _ completed: Bool, _ returnedItems: [Any]?, _ error: Error?) -> Void
+    let activityItems: [Any]
+    let applicationActivities: [UIActivity]? = nil
+    let excludedActivityTypes: [UIActivity.ActivityType]? = nil
+    let callback: Callback? = nil
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let controller = UIActivityViewController(
+            activityItems: activityItems,
+            applicationActivities: applicationActivities
+        )
+        controller.excludedActivityTypes = excludedActivityTypes
+        controller.completionWithItemsHandler = callback
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
+        // nothing to do here
+    }
+}
+
 struct PreparePlayView: View {
     @State var sheetOpen = false
     @State var formValues = FormValues()
+    @State var activitySheetOpen = false
 
     @StateObject var playerViewModel = PlayerViewModel.shared
 
@@ -19,6 +41,9 @@ struct PreparePlayView: View {
                 if UIDevice.current.userInterfaceIdiom == .pad {
                     Button(movie.title) {
                         playerViewModel.prepareToPlay(movie)
+                    }
+                    .onLongPressGesture{
+                        activitySheetOpen = true
                     }
                 } else {
                     NavigationLink(movie.title) {
@@ -72,6 +97,9 @@ struct PreparePlayView: View {
                 #endif
             }
         }
+//        .sheet(isPresented: $activitySheetOpen) {
+//            ShareSheetView(activityItems: ["Hello World"])
+//        }
     }
 
     struct FormValues {
